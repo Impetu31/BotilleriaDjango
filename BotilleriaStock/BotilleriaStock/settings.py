@@ -22,9 +22,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # Asegúrate de que esté al principio
-    'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -33,9 +33,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Ejemplo de origen permitido
-    "http://localhost:8000",  # Otro ejemplo de origen permitido
-    # Agrega aquí más orígenes permitidos según tu configuración
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "null",
 ]
 
 CORS_ALLOW_HEADERS = [
