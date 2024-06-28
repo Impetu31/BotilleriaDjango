@@ -11,10 +11,10 @@ class Producto(models.Model):
 
 class Cliente(models.Model):
     nombre_usuario = models.CharField(max_length=20)
-    correo = models.EmailField(max_length=254)
-    rut = models.CharField(max_length=12, primary_key=True, unique=True)
-    numero_documento = models.CharField(max_length=6)
-    contraseña = models.CharField(max_length=128)
+    correo = models.EmailField(max_length=100)
+    rut = models.CharField(max_length=10, primary_key=True, unique=True)
+    numero_documento = models.CharField(max_length=9)
+    contraseña = models.CharField(max_length=9)
 
     def __str__(self):
         return f"{self.nombre_usuario} {self.correo} {self.rut} {self.numero_documento}"
