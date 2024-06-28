@@ -18,11 +18,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'BotilleriaApp',
-    'corsheaders'
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # Asegúrate de que esté al principio
     'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -33,8 +33,22 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:8000",
+    "http://localhost:3000",  # Ejemplo de origen permitido
+    "http://localhost:8000",  # Otro ejemplo de origen permitido
+    # Agrega aquí más orígenes permitidos según tu configuración
+]
+
+CORS_ALLOW_HEADERS = [
+    'content-type',
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
 ]
 
 ROOT_URLCONF = 'BotilleriaStock.urls'
